@@ -11,6 +11,10 @@
   <link rel="shortcut icon" href="media/favicon/sagerobo.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/authors.js"></script>
+  <script src="js/publications.js"></script>
+
 </head>
 
 <body>
@@ -23,50 +27,26 @@
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr style="padding:0px">
-                <td style="padding:0%0%0%0%;width:5%;max-width:5%;">
-                </td>
+                <td style="padding:0%0%0%0%;width:5%;max-width:5%;"></td>
                 <td style="padding:0%0%0%0%;width:22%;max-width:22%;">
-                  <img
-                      style="width:100%;object-fit: cover; border-radius: 5%; display: block;" alt="profile photo"
-                      src="media/pics/sagerobo.PNG" class="hoverZoomLink">
+                  <img style="width:100%;object-fit: cover; border-radius: 5%; display: block;" alt="profile photo"
+                    src="media/pics/sagerobo.PNG" class="hoverZoomLink">
                 </td>
                 <td style="padding:0%;width:60%;vertical-align:middle">
                   <p class="name" style="text-align: center;">
                     SAGE Robotics
                   </p>
                   <p class="subname" style="text-align: center;">
-                    <span class="sa-underline">SA</span>fe, <span class="sa-underline">AG</span>ile, and <span class="sa-underline">GE</span>neralizable Robotics
+                    <span class="sa-underline">SA</span>fe, <span class="sa-underline">AG</span>ile, and <span
+                      class="sa-underline">GE</span>neralizable Robotics
                   </p>
-                  <!-- <p>
-                    I'm currently a first-year Robotics MSE student at the <a href="https://www.grasp.upenn.edu/">GRASP
-                      Lab</a>, advised by <a href="https://nbfigueroa.github.io/">Prof. Nadia Figueroa</a>.
-                    I also work as a research assistant at <a href="https://github.com/penn-figueroa-lab">Figueroa
-                      Robotics Lab@Penn</a>.
-                    Previously, I received my bachelor's degree in Measurement and Control Technology and Instruments
-                    from <a href="https://www.seu.edu.cn/">Southeast University</a>, advised by <a
-                      href="https://ins.seu.edu.cn/yy2/list.htm">Prof. Yuan Yang</a>.
-                  </p>
-                  <p>
-                    My research interests encompass Control Theory, Robot Learning, Human-Robot Interaction, and
-                    Task/Motion Planning.
-                  </p> -->
-                  <!-- <p>
-                  <span style="color:#b35a20;">Feel free to reach out if interested in research discussion / collaboration! I am also looking to mentor highly motivated students to work on research projects. Please send me an email if you are interested.</span>
-                </p> -->
-                  <!-- <p style="text-align:center">
-                    <a href="mailto:zizhez@seas.upenn.edu">Email</a> &nbsp;/&nbsp;
-                    <a href="https://scholar.google.com/citations?user=0OY7JKAAAAAJ">Google Scholar</a> &nbsp;/&nbsp;
-                    <a href="pdf/Zizhe_Zhang_CV_Jun_2025.pdf">CV</a> &nbsp;/&nbsp;
-                    <a href="https://www.linkedin.com/in/zizhe-zhang/">LinkedIn</a> &nbsp;/&nbsp;
-                    <a href="https://github.com/zhang-zizhe">Github</a>
-                  </p> -->
                 </td>
-                <td style="padding:0%0%0%0%;width:5%;max-width:5%;">
-                </td>
+                <td style="padding:0%0%0%0%;width:5%;max-width:5%;"></td>
               </tr>
             </tbody>
           </table>
           <br>
+
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
@@ -74,7 +54,8 @@
                 <td style="padding:16px;width:100%;vertical-align:middle">
                   <h2>News</h2>
                   <ul style="list-style-type: none; padding-left: 0;">
-                    <li><strong style="margin-right: 10px;">Nov 2025:</strong>The idea for SAGE Robotics—Safe, Agile, and Generalizable Robotics—was conceived in November 2025 during a trip to Puerto Rico 🇵🇷.
+                    <li><strong style="margin-right: 10px;">Nov 2025:</strong>The idea for SAGE Robotics—Safe, Agile,
+                      and Generalizable Robotics—was conceived in November 2025 during a trip to Puerto Rico 🇵🇷.
                     </li>
                   </ul>
                 </td>
@@ -82,179 +63,37 @@
             </tbody>
           </table>
 
-          <!-- <table
+          <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr>
                 <td style="padding:16px 16px 0px 16px;width:100%;vertical-align:middle">
-                  <h2>Publications</h2>
+                  <h2>
+                    Publications 
+                    <span style="font-size: clamp(16px, 3.3vw, 25px); font-weight: normal; margin-left: 5px;">
+                      (
+                      <span class="filter-btn" id="btn-selected" onclick="renderPubs('selected')">show selected</span> /
+                      <span class="filter-btn" id="btn-date" onclick="renderPubs('date')">show all by date</span> /
+                      <span class="filter-btn" id="btn-topic" onclick="renderPubs('topic')">show all by topic</span>
+                      )
+                    </span>
+                    </h2>
+                  <div id="topic-bar" style="display:none;"></div>
                 </td>
               </tr>
               <tr>
                 <td style="padding:0px 16px 16px 16px;width:100%;vertical-align:middle">
-                  <p style="margin: 0px;"><sup>*</sup> and <sup>†</sup> denote equal contribution.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table> -->
-          <!-- <table
-            style="width:100%;height:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:16px;width:20%;height:auto;vertical-align:middle">
-                  <div style="display:flex; align-items:center; justify-content:center;">
-                    <div class="one">
-                      <div class="two" id="vlmgineer_video" style="opacity:1;">
-                        <video width="100%" height=auto muted autoplay loop playsinline>
-                          <source src="media/vlmgineer/vlmgineer.mp4" type="video/mp4">
-                          Your browser does not support the video tag.
-                        </video>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;height:auto;vertical-align:middle">
-                  <strong class="papertitle">
-                    VLMgineer: Vision Language Models as Robotic Toolsmiths
-                  </strong><br>
-                  <a href="https://ggao22.github.io/">George Jiayuan Gao*</a>,
-                  <a href="http://imtianyuli.com/">Tianyu Li*</a>,
-                  <a href="https://junyaoshi.github.io/">Junyao Shi</a>,
-                  <u><strong>Zizhe Zhang</strong></u><sup>†</sup>,
-                  <a href="https://yihanli126.github.io/">Yihan Li</a><sup>†</sup>,
-                  <a href="https://nbfigueroa.github.io/">Nadia Figueroa</a>,
-                  <a href="https://www.seas.upenn.edu/~dineshj/">Dinesh Jayaraman</a>
-                  <br>
-                  <em>Oral Spotlight✨ at <a href="https://rss-hardware-intelligence.github.io/">Workshop on Robot Hardware-Aware Intelligence</a>, 2025</em>
-                  <br>
-                  <em>Under Review</em>
-                  <br>
-                  <a href="https://vlmgineer.github.io/">project page</a>
-                </td>
-              </tr>
-              <tr>
-                <td style="padding:16px;width:20%;height:auto;vertical-align:middle">
-                  <div style="display:flex; align-items:center; justify-content:center;">
-                    <div class="one">
-                      <div class="two" id="vlmgineer_video" style="opacity:1;">
-                        <img src="media/ibvs/ibvs.png" width="100%" alt="IBVS Enhanced" style="margin-top: 20px;">
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td style="padding:8px;width:80%;height:auto;vertical-align:middle">
-                  <strong class="papertitle">
-                    Image-Based Visual Servoing for Enhanced Cooperation of Dual-Arm Manipulation
-                  </strong><br>
-                  <u><strong>Zizhe Zhang</strong></u>,
-                  <a href="https://scholar.google.com/citations?user=zuEsn_kAAAAJ&hl=en">Yuan Yang</a>,
-                  <a href="https://www.researchgate.net/profile/Wenqiang-Zuo">Wenqiang Zuo</a>,
-                  <a href="https://orcid.org/0000-0002-6362-4043">Guangming Song</a>,
-                  <a href="https://scholar.google.com/citations?user=RjQ5TrEAAAAJ&hl=en">Aiguo Song</a>,
-                  <a href="https://scholar.google.com/citations?user=LVnHobEAAAAJ&hl=en">Yang Shi</a>
-                  <br>
-                  <em>IEEE Robotic and Automation Letters, 2025</em>
-                  <br>
-                  <a href="https://ieeexplore.ieee.org/document/10891400">paper</a>
-                  /
-                  <a href="https://arxiv.org/abs/2410.19432">arxiv</a>
-                  /
-                  <a href="/pages/ral-ibvs-enhanced/index.html">project page</a>
-                </td>
-              </tr>
-            </tbody>
-          </table> -->
-          <!-- <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle">
-                  <h2>Teaching</h2>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:0px 16px 16px 16px;width:100%;vertical-align:middle">
-                  <ul style="list-style-type: none; padding-left: 0;">
-                    <li>Teaching Assistant, <a
-                        href="https://antonilo.github.io/real_world_robot_learning_sp25/">Real-World Robot Learning</a>,
-                      University of Pennsylvania</li>
-                    <li>Teaching Assistant, <a href="https://tonydear.com/teaching/coms4701">Artificial
-                        Intelligence</a>, Columbia University</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table> -->
-
-          <!-- <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle">
-                  <h2>Mentoring</h2>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:0px 16px 16px 16px;width:100%;vertical-align:middle">
-  
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle">
-                  <h2>Professional Services</h2>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:0px 16px 16px 16px;width:100%;vertical-align:middle">
-                  <p><strong>Reviewer:</strong> T-RO</p>
+                  <p style="margin: 0px;">* and † denote equal contribution.</p>
                 </td>
               </tr>
             </tbody>
           </table>
 
           <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:16px;width:100%;vertical-align:middle">
-                  <h2>Miscellaneous</h2>
-                </td>
-              </tr>
-            </tbody>
+            style="padding:0px 16px 0px 16px;width:100%;height:auto;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody id="pub-list">
+              </tbody>
           </table>
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:0px 16px;width:100%;vertical-align:middle">
-                  <p>
-                    🎮 Love playing CS2 and Football Manager.
-                  </p>
-                  <p>
-                    ⚽️ Love playing soccer, used to be a player of the varsity soccer team. Huge fan of <a class="club" href="https://www.lcfc.com/pages/en/home">Leicester City</a> and <a
-                    class="club" href="https://www.inter.it/en">Inter</a>.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table> -->
 
           <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -273,6 +112,214 @@
         </td>
       </tr>
   </table>
-</body>
 
+  <script>
+    // --- 辅助函数 ---
+    function formatAuthors(authors) {
+      return authors.map(author => {
+        let name = author.name;
+        let info = authorsDb[name];
+        let displayName = name;
+        let mark = author.mark ? `${author.mark}` : "";
+
+        if (info) {
+          if (info.isMe) displayName = `<u><strong>${name}</strong></u>`;
+          if (info.url) return `<a href="${info.url}">${displayName}</a>${mark}`;
+          return `${displayName}${mark}`;
+        }
+        return `${name}${mark}`;
+      }).join(", ");
+    }
+
+    function formatLinks(links) {
+      if (!links) return "";
+      return links.map(link => `<em><a href="${link.url}">${link.name}</a></em>`).join(" / ");
+    }
+
+    // 生成单篇论文的 HTML 行
+    function createPaperRow(pub) {
+      // --- 新增逻辑：寻找点击图片跳转的最佳链接 ---
+      let destUrl = null;
+      if (pub.links && pub.links.length > 0) {
+        // 1. 优先找名字里包含 "project", "website", "page" 的链接
+        let target = pub.links.find(l => /project|website|page/i.test(l.name));
+        
+        // 2. 如果没找到，再找 "paper", "pdf", "arxiv"
+        if (!target) {
+           target = pub.links.find(l => /paper|pdf|arxiv/i.test(l.name));
+        }
+        
+        // 3. 实在没有，就默认用列表里的第一个链接
+        if (!target) {
+           target = pub.links[0]; 
+        }
+        
+        destUrl = target ? target.url : null;
+      }
+
+      // --- 生成媒体内容 (图片/视频) ---
+      let mediaContent = "";
+      let mediaStyle = pub.media.style || "";
+      
+      if (pub.media.type === "video") {
+        mediaContent = `
+            <video width="100%" height=auto muted autoplay loop playsinline style="border-radius: 4px;">
+              <source src="${pub.media.src}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>`;
+      } else {
+        mediaContent = `
+            <img src="${pub.media.src}" width="100%" alt="${pub.title}" style="${mediaStyle}; border-radius: 4px;">`;
+      }
+
+      // --- 关键步骤：如果有链接，就用 <a> 包裹媒体内容 ---
+      if (destUrl) {
+          // target="_blank" 表示在新窗口打开
+          // display: block 防止链接底部有空隙
+          mediaContent = `<a href="${destUrl}" style="display:block; border:none;">${mediaContent}</a>`;
+      }
+
+      let mediaHtml = `
+          <div class="two" style="opacity:1;">
+            ${mediaContent}
+          </div>`;
+
+      let authorsHtml = formatAuthors(pub.authors);
+      let linksHtml = formatLinks(pub.links);
+      let venueAuxHtml = "";
+      
+      if (pub.venueAux) {
+          // 如果是数组 (比如写了3行)
+          if (Array.isArray(pub.venueAux)) {
+              // 遍历数组，每一行前面加 <br>，并用 <em> 包裹
+              venueAuxHtml = pub.venueAux.map(line => `<br><em>${line}</em>`).join("");
+          } 
+          // 如果是普通字符串 (兼容以前的写法)
+          else {
+              venueAuxHtml = `<br><em>${pub.venueAux}</em>`;
+          }
+      }
+
+      return `
+        <tr class="pub-row">
+          <td style="padding:8px;width:25%;height:auto;vertical-align:middle">
+            <div style="display:flex; align-items:center; justify-content:center;">
+              <div class="one">
+                ${mediaHtml}
+              </div>
+            </div>
+          </td>
+          <td style="padding:8px;width:75%;height:auto;vertical-align:middle">
+            
+            <strong class="papertitle" style="display:block; margin-bottom: 5px;">${pub.title}</strong>
+            
+            <div style="margin-bottom: 5px;">
+                ${authorsHtml}
+            </div>
+            
+            <div style="margin-bottom: 5px;">
+                <em>${pub.venue}</em>
+                ${venueAuxHtml}
+            </div>
+            
+            <div style="margin-top: 5px;"> ${linksHtml}
+            </div>
+
+          </td>
+        </tr>
+      `;
+    }
+
+    // --- 核心渲染逻辑 ---
+    // 新增：specificTopic 参数，默认为 null
+    function renderPubs(mode, specificTopic = null) {
+      const container = $("#pub-list");
+      container.empty(); // 清空列表
+
+      // 1. 更新主按钮状态
+      $(".filter-btn").removeClass("active");
+      $("#btn-" + mode).addClass("active");
+
+      let data = [...publicationsData]; // 复制数据
+
+      // 2. 生成 Topics 栏
+      // --- 修改点 A：提取所有 Topic (支持数组结构) ---
+      // 使用 flatMap 把所有论文的 topic 数组铺平，然后去重
+      const allTopics = [...new Set(
+        data.flatMap(p => {
+          if (Array.isArray(p.topic)) return p.topic; // 如果是数组，直接返回
+          if (p.topic) return [p.topic]; // 如果是旧数据的字符串，转成数组
+          return []; // 如果没写 topic
+        })
+      )].sort(); // 加上 .sort() 让 Topic 按字母顺序排列，看起来更整齐
+      
+      if (allTopics.length > 0) {
+        const topicLinks = allTopics.map(t => {
+          const isActive = (t === specificTopic) ? "active-topic" : "";
+          return `<span class="topic-link ${isActive}" onclick="renderPubs('topic', '${t}')">${t}</span>`;
+        }).join(" / ");
+        
+        $("#topic-bar").html("<strong>Topics:</strong> " + topicLinks).show();
+      } else {
+        $("#topic-bar").hide();
+      }
+
+      // 3. 根据模式渲染
+      if (mode === 'selected') {
+        // --- 模式 A: Selected ---
+        data = data.filter(p => p.selected).sort((a, b) => b.year - a.year);
+        data.forEach(pub => container.append(createPaperRow(pub)));
+      
+      } else if (mode === 'date') {
+        // --- 模式 B: By Date ---
+        data.sort((a, b) => b.year - a.year);
+        
+        let lastYear = null;
+        data.forEach(pub => {
+          if (pub.year !== lastYear) {
+            container.append(`<tr><td colspan="2" class="group-title">${pub.year}</td></tr>`);
+            lastYear = pub.year;
+          }
+          container.append(createPaperRow(pub));
+        });
+
+      } else if (mode === 'topic') {
+        // --- 模式 C: By Topic ---
+        
+        let topicsToRender = allTopics;
+        
+        // 如果传入了具体的 specificTopic，就只渲染这一个
+        if (specificTopic) {
+            topicsToRender = [specificTopic];
+        }
+
+        // 遍历需要显示的 Topic
+        topicsToRender.forEach(topic => {
+          // --- 修改点 B：筛选逻辑 (支持数组包含) ---
+          const group = data.filter(p => {
+             // 兼容性处理：如果是数组用 includes，如果是字符串用 ===
+             if (Array.isArray(p.topic)) {
+                 return p.topic.includes(topic);
+             }
+             return p.topic === topic;
+          });
+
+          if (group.length > 0) {
+             container.append(`<tr><td colspan="2" class="group-title">${topic}</td></tr>`);
+            
+            // 组内按年份排序
+            group.sort((a, b) => b.year - a.year).forEach(pub => {
+              container.append(createPaperRow(pub));
+            });
+          }
+        });
+      }
+    }
+
+    // 页面加载完成后，默认显示 selected
+    $(document).ready(function () {
+      renderPubs('selected');
+    });
+  </script>
+</body>
 </html>

@@ -1,3 +1,6 @@
+/* =========================================
+   1. Font Definitions (Lato)
+   ========================================= */
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -63,6 +66,9 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* =========================================
+   2. General Typography & Elements
+   ========================================= */
 a {
   color: #1e92cd;
   text-decoration: none;
@@ -84,36 +90,37 @@ th,
 tr,
 p,
 a {
-  /* font-family: 'Lato', Verdana, Helvetica, sans-serif; */
   font-family: Optima, Georgia, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: clamp(12px, 3vw, 20px);
+  font-size: clamp(14px, 3vw, 20px);
 }
 
 strong {
   font-family: Optima, Georgia, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: clamp(12px, 3vw, 20px);
+  font-size: clamp(14px, 3vw, 20px);
 }
 
 h2 {
   margin: 0;
   font-weight: normal;
   font-family: Optima, Georgia, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: clamp(14px, 4vw, 35px);
+  font-size: clamp(20px, 4vw, 35px);
 }
 
+/* =========================================
+   3. Specific Components
+   ========================================= */
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: clamp(16px, 3.3vw, 22px);
   font-weight: 700;
 }
 
 .name {
-  /* padding-top: 20px; */
   margin: 0;
-  /* font-family: 'Lato', Verdana, Helvetica, sans-serif; */
   font-family: Optima, Georgia, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: clamp(20px, 9vw, 100px);
 }
+
 .subname {
   padding-top: 3px;
   margin: 0;
@@ -121,10 +128,9 @@ h2 {
   font-size: clamp(14px, 4vw, 35px);
 }
 
-/* Underline only the first two letters 'Sa' with both top and bottom lines */
+/* Underline only the first two letters 'Sa' */
 .sa-underline {
   display: inline-block;
-  /* padding: 0 3px;  */
   border-bottom: 2px solid currentColor;
   border-top: 2px solid currentColor;
   line-height: 1;
@@ -135,16 +141,13 @@ h2 {
   margin: 0;
 }
 
+/* Image Containers - Default (Desktop) */
 .one {
-  width: 160px;
-  /* height: 160px; */
   position: relative;
+  /* Width removed to allow responsiveness */
 }
 
 .two {
-  width: 160px;
-  /* height: 160px; */
-  /* position: absolute; */
   position: relative;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -166,4 +169,134 @@ span.highlight {
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
+}
+
+/* =========================================
+   4. Mobile Responsive Layout
+   ========================================= */
+@media screen and (max-width: 768px) {
+  
+  /* Stack the publication rows vertically */
+  tr.pub-row {
+    display: block;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+  }
+
+  /* Force table cells to full width blocks */
+  tr.pub-row td {
+    display: block;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Image/Video Container Cell */
+  tr.pub-row td:first-child {
+    width: 80% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  /* Force inner image containers to fill the parent */
+  tr.pub-row td:first-child div,
+  tr.pub-row td:first-child .one,
+  tr.pub-row td:first-child .two {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Actual Images/Videos */
+  tr.pub-row img, 
+  tr.pub-row video {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  /* Text Content Cell */
+  tr.pub-row td:last-child {
+    text-align: left;
+    padding: 0 20px !important;
+  }
+}
+/* =========================================
+   5. Paper Media Styling
+   ========================================= */
+/* 给论文列表里的所有图片和视频添加圆角 */
+.pub-row img, 
+.pub-row video {
+  border-radius: 8px !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12) !important;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.pub-row img:hover, 
+.pub-row video:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2) !important;
+}
+/* =========================================
+   6. Filter Controls & Group Headers
+   ========================================= */
+
+/* 筛选按钮样式 */
+.filter-btn {
+  cursor: pointer;
+  color: #1e92cd; /* 链接颜色 */
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  text-decoration: underline;
+}
+
+/* 当前选中的模式 */
+.filter-btn.active {
+  color: #333; /* 黑色 */
+  /* font-weight: bold; */
+  text-decoration: none;
+  cursor: default;
+}
+
+/* 分组标题 (如 2025, Robotics 等) */
+.group-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Optima, 'Lato', sans-serif; /* 保持字体一致 */
+  font-size: 1.4em;
+  color: #666; /* 你的主题色 */
+  border-bottom: 1px solid #eee; /* 可选：加个下划线更清晰 */
+  margin-bottom: 15px;
+}
+
+/* Topics 列表栏 */
+#topic-bar {
+  font-size: 1em;
+  color: #333;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+/* Topics 栏里的链接样式 */
+.topic-link {
+  cursor: pointer;
+  color: #666; /* 默认深灰色 */
+  transition: color 0.2s;
+}
+
+.topic-link:hover {
+  color: #1e92cd; /* 悬停变蓝 */
+  /* text-decoration: underline; */
+}
+
+/* 当某个 Topic 被选中时高亮 (可选) */
+.topic-link.active-topic {
+  color: #333; 
+  /* font-weight: bold; */
 }
