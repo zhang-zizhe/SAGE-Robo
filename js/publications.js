@@ -11,8 +11,8 @@ const publicationsData = [
         ],
         venue: "Under Review",
         venueAux: [
-            "<span style='color: #e74d3c; font-weight: bold;'>Best Student Paper Award🏆</span> at <a href='https://building-safe-robots-workshop.github.io/'>IROS Workshop on Building Safe Robots</a>, 2025",
-            "<span style='color: #e74d3c; font-weight: bold;'>Best Contribution Award🏆</span> at <a href='https://sites.google.com/view/e-rlc2025/home-page?authuser=0'>IROS Workshop on Exploring the Role of Energy in Robot Learning and Control</a>, 2025",
+            "<span style='color: #e74d3c; font-weight: bold;'>🏆 Best Student Paper Award</span> at <a href='https://building-safe-robots-workshop.github.io/'>IROS Workshop on Building Safe Robots</a>, 2025",
+            "<span style='color: #e74d3c; font-weight: bold;'>🏆 Best Contribution Award</span> at <a href='https://sites.google.com/view/e-rlc2025/home-page?authuser=0'>IROS Workshop on Exploring the Role of Energy in Robot Learning and Control</a>, 2025",
         ],
         links: [
             { name: "<span style='color: #e74d3c; font-weight: bold;'>Award</span>", url: "https://zizhe.io/assets/awards/vpptcws_cmp.pdf" },
